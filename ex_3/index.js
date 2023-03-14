@@ -5,17 +5,21 @@ const btnSend = document.querySelector('.btnSend');
 const btnGeo = document.querySelector('.btnGeo');
 
 const websocket = new WebSocket(wsUrl);
+
 websocket.onopen = function(evt) {
-    console.log('CONNECTED');
+  writeToScreen('CONNECTED');
 };
+
 websocket.onclose = function(evt) {
     console.log("DISCONNECTED");
 };
+
 websocket.onmessage = function(evt) {
     writeToScreen(
       '<div class="serverMessage">SERVER: ' + evt.data+'</div>'
     );
 };
+
 websocket.onerror = function(evt) {
     writeToScreen(
       '<span style="color: red;">ERROR:</span> ' + evt.data
@@ -29,12 +33,16 @@ function writeToScreen(message) {
   output.appendChild(pre);
 }
 
-btnSend.addEventListener('click', () => {
+function sendMessage() {
   const message = document.querySelector('.input').value;
+  if (!message) return;
   writeToScreen(
     '<div class="userMessage">YOU: ' + message+'</div>');
   websocket.send(message);
-});
+  document.querySelector('.input').value = '';
+}
+
+btnSend.addEventListener('click', sendMessage);
 
 
 const error = () => {
