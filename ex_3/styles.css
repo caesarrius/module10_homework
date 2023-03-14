@@ -91,7 +91,6 @@
     background-color: rgb(229, 242, 253);
     border-radius: 10%;
     width: fit-content;
-    word-break: break-all;
 }
 
 .userMessage {
@@ -100,9 +99,6 @@
     margin-right: 20px;
     border:#7e9aff 3px solid;
     background-color: aliceblue;
-    display: flex;
-    align-self: flex-end;
     border-radius: 10%;
     width: fit-content;
-    word-break: break-all;
 }
