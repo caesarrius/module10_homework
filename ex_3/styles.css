@@ -1,0 +1,108 @@
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+.chatWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    background-color: rgb(211, 225, 250);
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 1%;
+}
+
+.chatHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chatFooter {
+    display: flex;
+    flex-direction: row;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 1%;
+    background-color: rgb(252, 253, 255);
+}
+
+.btn {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    
+    display: flex;
+    margin: 5px 10px;
+    padding: 10px 10px;
+    border-radius: 1px;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: white;
+    background: #315efb;
+    transition: 0.3s;
+}
+
+.btnGeo {
+    margin-right: 0;
+}
+
+.input {
+    height: 30px;
+    width: 100%;
+    padding-left: 10xp;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 1%;
+
+}
+  
+.btn:hover {
+    box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+    transform: scale(1.05);
+}
+
+.serverMessage {
+    padding: 10px;
+    margin-right: 250px;
+    margin-left: 20px;
+    border:#7e9aff 3px solid;
+    background-color: rgb(229, 242, 253);
+    border-radius: 10%;
+    width: fit-content;
+    word-break: break-all;
+}
+
+.userMessage {
+    padding: 10px;
+    margin-left: 250px;
+    margin-right: 20px;
+    border:#7e9aff 3px solid;
+    background-color: aliceblue;
+    display: flex;
+    align-self: flex-end;
+    border-radius: 10%;
+    width: fit-content;
+    word-break: break-all;
+}
