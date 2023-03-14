@@ -55,7 +55,7 @@ const success = (position) => {
   
 btnGeo.addEventListener('click', () => {
     if (!navigator.geolocation) {
-      writeToScreen('Geolocation не поддерживается вашим браузером');
+      writeToScreen('Geolocation is not supported by your browser');
     } else {
       navigator.geolocation.getCurrentPosition(success, error);
     }
